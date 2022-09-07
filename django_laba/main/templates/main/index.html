@@ -5,53 +5,30 @@
     <title>Coach &mdash; Website Template by Colorlib</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    
+
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700, 900|Playfair+Display:400,900" rel="stylesheet">
-<!--    <link rel="stylesheet" href="fonts/icomoon/style.css">-->
-    <link rel="stylesheet" href="{% static 'main/fonts/icomoon/style.css' %}">
 
-<!--    <link rel="stylesheet" href="css/bootstrap.min.css">-->
+    <link rel="stylesheet" href="{% static 'main/css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'main/css/aos.css' %}">
     <link rel="stylesheet" href="{% static 'main/css/bootstrap.min.css' %}">
-
-<!--    <link rel="stylesheet" href="css/jquery-ui.css">-->
     <link rel="stylesheet" href="{% static 'main/css/jquery-ui.css' %}">
-
-<!--    <link rel="stylesheet" href="css/owl.carousel.min.css">-->
     <link rel="stylesheet" href="{% static 'main/css/owl.carousel.min.css' %}">
-
-<!--    <link rel="stylesheet" href="css/owl.theme.default.min.css">-->
     <link rel="stylesheet" href="{% static 'main/css/owl.theme.default.min.css' %}">
-
-<!--    <link rel="stylesheet" href="css/owl.theme.default.min.css">-->
     <link rel="stylesheet" href="{% static 'main/css/owl.theme.default.min.css' %}">
-
-<!--    <link rel="stylesheet" href="css/jquery.fancybox.min.css">-->
     <link rel="stylesheet" href="{% static 'main/css/jquery.fancybox.min.css' %}">
-
-<!--    <link rel="stylesheet" href="css/bootstrap-datepicker.css">-->
     <link rel="stylesheet" href="{% static 'main/css/bootstrap-datepicker.css' %}">
 
-<!--    <link rel="stylesheet" href="fonts/flaticon/font/flaticon.css">-->
     <link rel="stylesheet" href="{% static 'main/fonts/flaticon/font/flaticon.css' %}">
+    <link rel="stylesheet" href="{% static 'main/fonts/icomoon/style.css' %}">
 
-<!--    <link rel="stylesheet" href="css/aos.css">-->
-    <link rel="stylesheet" href="{% static 'main/css/aos.css' %}">
-
-
-<!--    <link rel="stylesheet" href="css/style.css">-->
-    <link rel="stylesheet" href="{% static 'main/css/style.css' %}">
-    
   </head>
     <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300" id="home-section">
-
-
   <div id="overlayer"></div>
   <div class="loader">
     <div class="spinner-border text-primary" role="status">
       <span class="sr-only">Загрузка...</span>
     </div>
   </div>
-
 
   <div class="site-wrap">
 
@@ -71,7 +48,7 @@
         <div class="row align-items-center">
 
           <div class="col-6 col-xl-2">
-            <h1 class="mb-0 site-logo"><a href="index.html" class="h2 mb-0">Coach<span class="text-primary">.</span> </a></h1>
+            <h1 class="mb-0 site-logo"><a href="{% url 'home' %}" class="h2 mb-0">Coach<span class="text-primary">.</span> </a></h1>
           </div>
 
           <div class="col-12 col-md-10 d-none d-xl-block">
@@ -86,14 +63,7 @@
                     <li><a href="#testimonials-section" class="nav-link">Отзывы</a></li>
                     <li><a href="#gallery-section" class="nav-link">Галерея</a></li>
                     <li><a href="#blog-section" class="nav-link">Блог</a></li>
-                    <li class="has-children">
-                      <a href="#">Дополнительные ссылки</a>
-                      <ul class="dropdown">
-                        <li><a href="#">Menu One</a></li>
-                        <li><a href="#">Menu Two</a></li>
-                        <li><a href="#">Menu Three</a></li>
-                      </ul>
-                    </li>
+
                   </ul>
                 </li>
 
@@ -117,7 +87,7 @@
     </header>
 
 
-    <section class="site-blocks-cover overflow-hidden">
+    <section class="site-blocks-cover overflow-hidden" style="background-color: #ffd900;">
       <div class="container">
         <div class="row">
           <div class="col-lg-12 align-self-center">
@@ -126,7 +96,7 @@
               <div class="col-lg-11">
 
                 <h1>Мы <span class="typed-words"></span></h1>
-                <p>Станьте лучше с нами, мы поможем вам в достижении поставленной вами цели<br> <a href="#">Свяжитесь с нами</a></p>
+                <p>Станьте лучше с нами, мы поможем вам в достижении поставленной вами цели<br> <a href="#" style="color: orange;">Свяжитесь с нами</a></p>
               </div>
 
             </div>
@@ -157,9 +127,13 @@
             <h2 class="text-black">Привет, я Джон Основатель</h2>
           </div>
           <div class="col-md-6 mb-5">
-            <p>Текст здесь.</p>
-            <p>Текст здесь.</p>
-            <p>Текст здесь.</p>
+            <p>Помогу определиться с профессиональным направлением, выйти из тупика и начать любить рабочие понедельники</p>
+            <h4> Помогаю найти в себе:</h4>
+            <li> понимание, стоит ли менять работу</li>
+            <li> ясность, чего вам действительно хочется</li>
+            <li> видение горизонта будущего в плане карьеры</li>
+            <li> удовольствие от вашей работы</li>
+            <li> уверенность в себе как в профессионале</li>
             <p class="mt-5"><img src="{% static 'main/images/signature.jpg' %}" alt="Free website template by Free-Template.co" class="img-fluid w-25"></p>
           </div>
           <div class="col-md-5 ml-auto">
@@ -173,14 +147,7 @@
                 <h3 class="text-black m-0">Life конференция</h3>
                 <span class="text-muted">Лондон, Великобритания, 19 сентября 2019 г.</span>
               </li>
-              <li class="mb-4">
-                <h3 class="text-black m-0">Конференция по созданию</h3>
-                <span class="text-muted">Бристоль, Великобритания, 7 июня 2019 г.</span>
-              </li>
-              <li class="mb-4">
-                <h3 class="text-black m-0">Life конференция</h3>
-                <span class="text-muted">Лондон, Великобритания, 19 сентября 2019 г.</span>
-              </li>
+
             </ul>
           </div>
         </div>
@@ -188,8 +155,10 @@
         <div class="row">
           <div class="col-lg-3 text-left">
             <img src="{% static 'main/images/person_1.jpg' %}" alt="Free Website Template by Free-Template.co" class="rounded-circle img-fluid w-50 mb-4">
-            <h3 class="h4 text-black">Jean</h3>
-            <p>Текст здесь</p>
+            <h3 class="h4 text-black">Гвенет</h3>
+            <p>Моя работа открыть в вас скрытый потенциал! Вы уже обладаете всеми качествами и навыками, но их нужно вытащить наружу
+              и заставить работать на себя.
+              Проработка запросов — основная задача коуч-сессии.</p>
             <p>
               <a href="#" class="pl-0 pr-3"><span class="icon-facebook"></span></a>
               <a href="#" class="pl-3 pr-3"><span class="icon-twitter"></span></a>
@@ -199,8 +168,9 @@
           </div>
           <div class="col-lg-3 text-left">
             <img src="{% static 'main/images/person_2.jpg' %}" alt="Free Website Template by Free-Template.co" class="rounded-circle img-fluid w-50 mb-4">
-            <h3 class="h4 text-black">Rob</h3>
-            <p>Текст здесь</p>
+            <h3 class="h4 text-black">Гарри</h3>
+            <p>Хотите развить свой проект и разобраться, как сфокусированно уделять ему время,
+              как находить клиентов и стабильно зарабатывать на нем. Я помогу Вам с этим!</p>
             <p>
               <a href="#" class="pl-0 pr-3"><span class="icon-facebook"></span></a>
               <a href="#" class="pl-3 pr-3"><span class="icon-twitter"></span></a>
@@ -211,8 +181,11 @@
           </div>
           <div class="col-lg-3 text-left">
             <img src="{% static 'main/images/person_3.jpg' %}" alt="Free Website Template by Free-Template.co" class="rounded-circle img-fluid w-50 mb-4">
-            <h3 class="h4 text-black">Parker</h3>
-            <p>Текст здесь</p>
+            <h3 class="h4 text-black">Джон</h3>
+            <p>Знаете, в чем разница между успешными людьми и не очень?
+              Всё довольно просто — первые чувствуют свои сильные стороны и используют их максимально эффективно.
+              А вторые — либо вовсе не понимают, в чём сильны, либо прилагают недостаточно усилий для воплощения
+              в жизнь всех своих идей.</p>
             <p>
               <a href="#" class="pl-0 pr-3"><span class="icon-facebook"></span></a>
               <a href="#" class="pl-3 pr-3"><span class="icon-twitter"></span></a>
@@ -222,8 +195,8 @@
           </div>
           <div class="col-lg-3 text-left">
             <img src="{% static 'main/images/person_4.jpg' %}" alt="Free Website Template by Free-Template.co" class="rounded-circle img-fluid w-50 mb-4">
-            <h3 class="h4 text-black">Kyle</h3>
-            <p>Текст здесь</p>
+            <h3 class="h4 text-black">Дэниэл</h3>
+            <p>Желаете открыть свой старап, реализовать бизнес-идею, но чувствуете неуверенность, есть страх провала, я помогу Вам!</p>
             <p>
               <a href="#" class="pl-0 pr-3"><span class="icon-facebook"></span></a>
               <a href="#" class="pl-3 pr-3"><span class="icon-twitter"></span></a>
@@ -242,45 +215,45 @@
         <div class="row mb-5 justify-content-center">
           <div class="col-md-7 text-center">
             <h2 class="text-black">Наше обучение</h2>
-            <p>Текст здесь</p>
+
           </div>
         </div>
 
         <div class="nonloop-block-13 owl-style owl-carousel">
           <div class="training">
             <figure class="mb-4"><img src="{% static 'main/images/coach_1_sm.jpg' %}" alt="Free website template by Free-Template.co" class="img-fluid"></figure>
-            <h3 class="text-black mb-3">Обучение лайф-коучу</h3>
-            <p>Текст здесь</p>
+            <h3 class="text-black mb-3">Обучение лайф-коучингу</h3>
+            <p>Мы сможем обучить вас всему необходимому для счастливой жизни</p>
           </div>
 
           <div class="training">
             <figure class="mb-4"><img src="{% static 'main/images/coach_2_sm.jpg' %}" alt="Free website template by Free-Template.co" class="img-fluid"></figure>
             <h3 class="text-black mb-3">Раскройте свой потенциал</h3>
-            <p>Текст здесь</p>
+            <p>Поможем Вам реализоваться и раскрыть свой потенциал</p>
           </div>
 
           <div class="training">
             <figure class="mb-4"><img src="{% static 'main/images/coach_3_sm.jpg' %}" alt="Free website template by Free-Template.co" class="img-fluid"></figure>
             <h3 class="text-black mb-3">Поменяйте свою жизнь</h3>
-            <p>Текст здесь</p>
+            <p>С нами Вы сможете перевернуть мир с ног на голову</p>
           </div>
 
           <div class="training">
             <figure class="mb-4"><img src="{% static 'main/images/coach_4_sm.jpg' %}" alt="Free website template by Free-Template.co" class="img-fluid"></figure>
-            <h3 class="text-black mb-3">Обучение лайф-коучу</h3>
-            <p>Текст здесь</p>
+            <h3 class="text-black mb-3">Бизнес-коучинг</h3>
+            <p>Поможем Вам реализоваться и раскрыть свой потенциал</p>
           </div>
 
           <div class="training">
             <figure class="mb-4"><img src="{% static 'main/images/coach_5_sm.jpg' %}" alt="Free website template by Free-Template.co" class="img-fluid"></figure>
-            <h3 class="text-black mb-3">Раскройте свой потенциал</h3>
-            <p>Текст здесь</p>
+            <h3 class="text-black mb-3">Бизнес трекинг</h3>
+            <p>Мы сможем обучить вас всему необходимому для успешного бизнеса</p>
           </div>
 
           <div class="training">
             <figure class="mb-4"><img src="{% static 'main/images/coach_6_sm.jpg' %}" alt="Free website template by Free-Template.co" class="img-fluid"></figure>
-            <h3 class="text-black mb-3">Поменяйте свою жизнь</h3>
-            <p>Текст здесь</p>
+            <h3 class="text-black mb-3">Личная эффективность</h3>
+            <p>С нами Вы сможете перевернуть мир с ног на голову</p>
           </div>
         </div>
 
@@ -294,7 +267,6 @@
         <div class="row mb-5 justify-content-center">
           <div class="col-md-7 text-center">
             <h2 class="text-black">Наши услуги</h2>
-            <p>Текст здесь</p>
           </div>
         </div>
 
@@ -302,41 +274,34 @@
           <div class="service">
             <div class="icon"><span class="flaticon-badge display-1 text-primary"></span></div>
             <h3 class="text-black mb-3">Обучение лайф-коучу</h3>
-            <p>Текст</p>
+
           </div>
 
           <div class="service">
             <div class="icon"><span class="flaticon-target display-1 text-primary"></span></div>
             <h3 class="text-black mb-3">Раскройте свой потенциал</h3>
-            <p>Текст</p>
           </div>
 
           <div class="service">
             <div class="icon"><span class="flaticon-agreement display-1 text-primary"></span></div>
             <h3 class="text-black mb-3">Поменяйте свою жизнь</h3>
-            <p>Текст</p>
           </div>
 
           <div class="service">
             <div class="icon"><span class="flaticon-line-chart display-1 text-primary"></span></div>
-            <h3 class="text-black mb-3">Обучение лайф-коучу</h3>
-            <p>Текст</p>
+            <h3 class="text-black mb-3">Бизнес-коучинг</h3>
           </div>
 
           <div class="service">
-
             <div class="icon"><span class="flaticon-target-1 display-1 text-primary"></span></div>
-            <h3 class="text-black mb-3">Раскройте свой потенциал</h3>
-            <p>Текст</p>
+            <h3 class="text-black mb-3">Бизнес трекинг</h3>
           </div>
 
           <div class="service">
             <div class="icon"><span class="flaticon-bar-chart display-1 text-primary"></span></div>
-            <h3 class="text-black mb-3">Поменяйте свою жизнь</h3>
-            <p>Текст</p>
+            <h3 class="text-black mb-3">Личная эффективность</h3>
           </div>
         </div>
-
       </div>
     </section>
 
@@ -345,44 +310,29 @@
         <div class="row mb-5 justify-content-center">
           <div class="col-md-7 text-center">
             <h2 class="text-black">Галерея</h2>
-            <p>Текст здесь</p>
+            <p>Фотографии с наших семинаров</p>
           </div>
         </div>
         
         <div class="row">
-          
             <a class="col-6 col-md-6 col-lg-4 col-xl-3 gal-item d-block" data-aos="fade-up" data-aos-delay="100" href="{% static 'main/images/coach_1_sm.jpg' %}" data-fancybox="gal"><img src="{% static 'main/images/coach_1_sm.jpg' %}" alt="Free Website Template by Free-Template.co" class="img-fluid"></a>
-
             <a class="col-6 col-md-6 col-lg-4 col-xl-3 gal-item d-block" data-aos="fade-up" data-aos-delay="100" href="{% static 'main/images/coach_2_sm.jpg' %}" data-fancybox="gal"><img src="{% static 'main/images/coach_2_sm.jpg' %}" alt="Free Website Template by Free-Template.co" class="img-fluid"></a>
-          
             <a class="col-6 col-md-6 col-lg-4 col-xl-3 gal-item d-block" data-aos="fade-up" data-aos-delay="100" href="{% static 'main/images/coach_3_sm.jpg' %}" data-fancybox="gal"><img src="{% static 'main/images/coach_3_sm.jpg' %}" alt="Free Website Template by Free-Template.co" class="img-fluid"></a>
-
             <a class="col-6 col-md-6 col-lg-4 col-xl-3 gal-item d-block" data-aos="fade-up" data-aos-delay="100" href="{% static 'main/images/coach_4_sm.jpg' %}" data-fancybox="gal"><img src="{% static 'main/images/coach_4_sm.jpg' %}" alt="Free Website Template by Free-Template.co" class="img-fluid"></a>
-          
             <a class="col-6 col-md-6 col-lg-4 col-xl-3 gal-item d-block" data-aos="fade-up" data-aos-delay="100" href="{% static 'main/images/coach_5_sm.jpg' %}" data-fancybox="gal"><img src="{% static 'main/images/coach_5_sm.jpg' %}" alt="Free Website Template by Free-Template.co" class="img-fluid"></a>
-          
             <a class="col-6 col-md-6 col-lg-4 col-xl-3 gal-item d-block" data-aos="fade-up" data-aos-delay="100" href="{% static 'main/images/coach_6_sm.jpg' %}" data-fancybox="gal"><img src="{% static 'main/images/coach_6_sm.jpg' %}" alt="Free Website Template by Free-Template.co" class="img-fluid"></a>
-          
             <a class="col-6 col-md-6 col-lg-4 col-xl-3 gal-item d-block" data-aos="fade-up" data-aos-delay="100" href="{% static 'main/images/coach_7_sm.jpg' %}" data-fancybox="gal"><img src="{% static 'main/images/coach_7_sm.jpg' %}" alt="Free Website Template by Free-Template.co" class="img-fluid"></a>
-          
             <a class="col-6 col-md-6 col-lg-4 col-xl-3 gal-item d-block" data-aos="fade-up" data-aos-delay="100" href="{% static 'main/images/coach_8_sm.jpg' %}" data-fancybox="gal"><img src="{% static 'main/images/coach_8_sm.jpg' %}" alt="Free Website Template by Free-Template.co" class="img-fluid"></a>
-          
             <a class="col-6 col-md-6 col-lg-4 col-xl-3 gal-item d-block" data-aos="fade-up" data-aos-delay="100" href="{% static 'main/images/coach_9_sm.jpg' %}" data-fancybox="gal"><img src="{% static 'main/images/coach_9_sm.jpg' %}" alt="Free Website Template by Free-Template.co" class="img-fluid"></a>
-
             <a class="col-6 col-md-6 col-lg-4 col-xl-3 gal-item d-block" data-aos="fade-up" data-aos-delay="100" href="{% static 'main/images/coach_10_sm.jpg' %}" data-fancybox="gal"><img src="{% static 'main/images/coach_10_sm.jpg' %}" alt="Free Website Template by Free-Template.co" class="img-fluid"></a>
-          
             <a class="col-6 col-md-6 col-lg-4 col-xl-3 gal-item d-block" data-aos="fade-up" data-aos-delay="100" href="{% static 'main/images/coach_11_sm.jpg' %}" data-fancybox="gal"><img src="{% static 'main/images/coach_11_sm.jpg' %}" alt="Free Website Template by Free-Template.co" class="img-fluid"></a>
-          
             <a class="col-6 col-md-6 col-lg-4 col-xl-3 gal-item d-block" data-aos="fade-up" data-aos-delay="100" href="{% static 'main/images/coach_12_sm.jpg' %}" data-fancybox="gal"><img src="{% static 'main/images/coach_12_sm.jpg' %}" alt="Free Website Template by Free-Template.co" class="img-fluid"></a>
-
         </div>
       </div>
     </section>
 
-
     <section class="site-section" id="testimonials-section" data-aos="fade">
       <div class="container">
-        
         <div class="row justify-content-center" data-aos="fade-up">
           <div class="col-lg-6 text-center mb-5">
             <h2 class="text-black mb-2">Счастливые клиенты</h2>
@@ -394,69 +344,71 @@
               <div class="block-testimony-1 text-center">
                 
                 <blockquote class="mb-4">
-                  <p>&ldquo;Отзыв клиента&rdquo;</p>
+                  <p>&ldquo;Примерно такой диалог был у нас с моим коучем на последнем занятии:
+                    «Хорошо, я вижу, что ты удовлетворен тем, что у тебя есть.
+                    И я знаю, что это важно для тебя. Я вижу, как ты счастлив, когда выходишь оттуда.
+                    Это то, что тебе нужно. Ты счастлив? «Да, я счастлив. » Ты счастлив? »
+                    Да, я вполне счастлив. «Хорошо. Скажи мне, где ты чувствуешь себя более счастливым,
+                    чем сейчас? Где ты хочешь быть? " Я чувствую себя счастливым сейчас, когда я вышел из здания.
+                    Я никогда не забуду тот опыт, который я получил после курса коуча, те знания стали для меня ключевыми&rdquo;</p>
                 </blockquote>
 
                 <figure>
-                  <img src="{% static 'main/images/person_4.jpg' %}" alt="Image" class="img-fluid rounded-circle mx-auto">
+                  <img src="{% static 'main/images/person_5.jpg' %}" alt="Image" class="img-fluid rounded-circle mx-auto">
                 </figure>
-                <h3 class="font-size-20 text-black">Ricky Fisher</h3>
+                <h3 class="font-size-20 text-black">Рики Фишер</h3>
               </div>
             </div>
 
             <div>
               <div class="block-testimony-1 text-center">
-
-                
-
                 <blockquote class="mb-4">
-                  <p>&ldquo;Отзыв клиента&rdquo;</p>
+                  <p>&ldquo;Коуч - это же не просто тренер. Это человек, который постоянно
+                    изучает себя и других, чтобы быть в курсе всех изменений и процессов,
+                    происходящих в жизни и в людях. И тут он может использовать свои знания,
+                    опыт и интуицию для помощи другим. Конечно же услуга коучинга положительно повлияла на мой успех на работе!&rdquo;</p>
                 </blockquote>
-
                 <figure>
-                  <img src="{% static 'main/images/person_2.jpg' %}" alt="Image" class="img-fluid rounded-circle mx-auto">
+                  <img src="{% static 'main/images/person_6.jpg' %}" alt="Image" class="img-fluid rounded-circle mx-auto">
                 </figure>
-                <h3 class="font-size-20 mb-4 text-black">Ken Davis</h3>
-
-                
+                <h3 class="font-size-20 mb-4 text-black">Кен Дэвис</h3>
               </div>
             </div>
 
             <div>
               <div class="block-testimony-1 text-center">
-                
-
                 <blockquote class="mb-4">
-                  <p>&ldquo;Отзыв клиента&rdquo;</p>
+                  <p>&ldquo;Коуч – это человек, который помогает вам разобраться в ваших проблемах,
+                    направляет вас в нужное русло, дает вам нужные советы и рекомендации,
+                    помогает найти выход из сложившейся ситуации. Когда я пришла на коучинг,
+                    я и представить не могла, что это такое и зачем нужно.
+                    Но мне очень хотелось узнать о том, как люди добиваются своих целей, чего они в итоге достигают.
+                    А еще я хотела понять, какой путь избрать в своей жизни.
+                    И я решила, что хочу быть частью чего-то большего, чем я сама.&rdquo;</p>
                 </blockquote>
-
                 <figure>
-                  <img src="{% static 'main/images/person_1.jpg' %}" alt="Image" class="img-fluid rounded-circle mx-auto">
+                  <img src="{% static 'main/images/person_7.jpg' %}" alt="Image" class="img-fluid rounded-circle mx-auto">
                 </figure>
-                <h3 class="font-size-20 text-black">Mellisa Griffin</h3>
-
-                
+                <h3 class="font-size-20 text-black">Меллиса Гриффин</h3>
               </div>
             </div>
 
             <div>
               <div class="block-testimony-1 text-center">
-
-
                 <blockquote class="mb-4">
-                  <p>&ldquo;Отзыв клиента&rdquo;</p>
+                  <p>&ldquo;Я работаю в сфере торговли и, как и у многих, возникают проблемы с персоналом.
+                    Очень рад, что нашел людей, которые предлагают действительно качественный продукт.
+                    А теперь у меня в штате только те люди, которых я знаю и которым доверяю.
+                    И хочу сказать, что благодаря вам я не только не потерял деньги,
+                    но и получил новые знакомства и партнеров по бизнесу, а также смог сэкономить
+                    большое количество времени&rdquo;</p>
                 </blockquote>
-
                 <figure>
-                  <img src="{% static 'main/images/person_3.jpg' %}" alt="Image" class="img-fluid rounded-circle mx-auto">
+                  <img src="{% static 'main/images/person_9.jpg' %}" alt="Image" class="img-fluid rounded-circle mx-auto">
                 </figure>
-                <h3 class="font-size-20 mb-4 text-black">Robert Steward</h3>
-
-                
+                <h3 class="font-size-20 mb-4 text-black">Роберт Стюард</h3>
               </div>
             </div>
-
-
           </div>
         </div>
       </div>
@@ -468,7 +420,6 @@
           <div class="col-lg-6 text-center mb-5">
             
             <h2 class="text-black mb-2">Наш блог</h2>
-            <p>Текст</p>
           </div>
         </div>
         <div class="row">
@@ -480,7 +431,7 @@
               <div class="blog-entry-text">
                 <h3><a href="single.html">Раскройте свой потенциал с помощью этих 5 советов</a></h3>
                 <span class="post-meta mb-3 d-block">17 апреля 2019 г.</span>
-                <p>Совет</p>
+                <p>Все просто, придерживайтесь этим 5 советам и тогда..</p>
                 <p><a href="#" class="">Читать больше..</a></p>
               </div>
             </div>
@@ -491,9 +442,9 @@
                 <a href="single.html"><img src="{% static 'main/images/coach_2_sm.jpg' %}" alt="Free Website Template by Free-Template.co" class="img-fluid rounded"></a>
               </figure>
               <div class="blog-entry-text">
-                <h3><a href="single.html">Раскройте свой потенциал с помощью этих 5 советов</a></h3>
+                <h3><a href="single.html">Есть большая цель, нет мотивации - что делать?</a></h3>
                 <span class="post-meta mb-3 d-block">26 апреля 2019 г.</span>
-                <p>Совет</p>
+                <p>Для начала просто начните..</p>
                 <p><a href="#" class="">Читать больше..</a></p>
               </div>
             </div>
@@ -505,9 +456,9 @@
                 <a href="single.html"><img src="{% static 'main/images/coach_3_sm.jpg' %}" alt="Free Website Template by Free-Template.co" class="img-fluid rounded"></a>
               </figure>
               <div class="blog-entry-text">
-                <h3><a href="single.html">Раскройте свой потенциал с помощью этих 5 советов</a></h3>
+                <h3><a href="single.html">У богатого бизнеса богатый собственник</a></h3>
                 <span class="post-meta mb-3 d-block">20 мая 2019 г.</span>
-                <p>Совет</p>
+                <p>Знали ли вы, о том, что каждый бизнесмен...</p>
                 <p><a href="#" class="">Читать больше..</a></p>
               </div>
             </div>
@@ -518,9 +469,9 @@
                 <a href="single.html"><img src="{% static 'main/images/coach_4_sm.jpg' %}" alt="Free Website Template by Free-Template.co" class="img-fluid rounded"></a>
               </figure>
               <div class="blog-entry-text">
-                <h3><a href="single.html">СоветРаскройте свой потенциал с помощью этих 5 советов</a></h3>
+                <h3><a href="single.html">Психозащиты и их влияние на бизнес: что помогает не сойти с ума в эпоху перемен</a></h3>
                 <span class="post-meta mb-3 d-block">11 февраля 2020 г.</span>
-                <p>Совет</p>
+                <p>Узнайте как оставаться в норме после тяжёлого рабочего дня..</p>
                 <p><a href="#" class="">Читать больше..</a></p>
               </div>
             </div>
@@ -581,21 +532,19 @@
               </div>
             </form>
           </div>
-          
         </div>
       </div>
     </div>
 
-    
-    
     <footer class="site-footer">
       <div class="container">
         <div class="row">
           <div class="col-md-4">
             <h2 class="footer-heading mb-4">О нас</h2>
-            <p>Текст</p>
+            <p>Мы компания, которая помогает людям в постановки целей и их выполнения,
+              неважно какая это сфера, бизнес, личная жизнь или карьера,
+              мы справимся с любой задачей</p>
           </div>
-
 
           <div class="col-md-3 ml-auto">
             <h2 class="footer-heading mb-4">Быстрые ссылки</h2>
@@ -611,10 +560,8 @@
           <div class="col-md-4">
             <div class="mb-5">
               <h2 class="footer-heading mb-4">Подписывайтесь на нас</h2>
-              <a href="#" class="pl-0 pr-3"><span class="icon-facebook"></span></a>
-              <a href="#" class="pl-3 pr-3"><span class="icon-twitter"></span></a>
-              <a href="#" class="pl-3 pr-3"><span class="icon-instagram"></span></a>
-              <a href="#" class="pl-3 pr-3"><span class="icon-linkedin"></span></a>
+              <a href="https://github.com/" class="pl-0 pr-3"><span class="icon-github"></span></a>
+              <a href="https://www.facebook.com/" class="pl-0 pr-3"><span class="icon-facebook"></span></a>
             </div>
 
             <h2 class="footer-heading mb-4">Подписаться на рассылку</h2>
@@ -626,21 +573,11 @@
                 </div>
               </div>
             </form>
-
           </div>
         </div>
       </div>
     </footer>
-
-  </div> <!-- .site-wrap -->
-
-
-
-
-
-
-
-
+  </div>
   <script src="{% static 'main/js/jquery-3.3.1.min.js' %}"></script>
   <script src="{% static 'main/js/jquery-ui.js' %}"></script>
   <script src="{% static 'main/js/popper.min.js' %}"></script>
@@ -652,14 +589,8 @@
   <script src="{% static 'main/js/jquery.fancybox.min.js' %}"></script>
   <script src="{% static 'main/js/jquery.sticky.js' %}"></script>
   <script src="{% static 'main/js/isotope.pkgd.min.js' %}"></script>
-
-
-
-  
   <script src="{% static 'main/js/typed.js' %}"></script>
             <script src="{% static 'main/js/typing.js' %}"></script>
-  
   <script src="{% static 'main/js/main.js' %}"></script>
-
   </body>
 </html>
